@@ -48,6 +48,15 @@
         margin-left: 18em;
         position: relative;
     }
+    @media screen and (max-width: 376px){
+        #bebek{
+            font-size: 1.4em;
+        }
+        #gguyi{
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
     @media screen and ( min-width: 279px) and (max-width: 281px){
         body{
             height: 653px;
@@ -66,7 +75,7 @@
         <div id="gguyi">
             <h1 class="subheader strong alignLeftRel tem" >Hours</h1>
             <div class="marginTopP alignLeftRel">
-                <p class="med48 redHatTextRegular tem" style="white-space: pre-line; text-align: left;"><b>Monday-Friday:</b> 9am-5pm
+                <p class="med48 redHatTextRegular tem" id="bebek" style="white-space: pre-line; text-align: left;"><b>Monday-Friday:</b> 9am-5pm
             <b>Saturday:</b> By appointment
             <b>Sunday:</b> Closed</p>
             </div>
