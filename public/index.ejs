@@ -1,0 +1,155 @@
+<style>
+    #home::before{
+        content: "home----";
+        position: fixed;
+        top: 0;
+        color: transparent;
+        background-color: #0044AA;
+        height: .2em;
+        width: max-content;
+    }
+    #main{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        position: relative;
+        flex-direction: column;
+        z-index: 1;
+    }
+    #main_container{
+        flex-direction: column;
+        text-align: center;
+    }
+    #main_container h2{
+        font-family: redHatTextBold;
+        color: var(--maincol);
+        font-size: 3.5em;
+    }
+    #title{
+        font-family: redHatDisplayBlack;  
+        font-weight: 900;
+        font-size: 5em;
+        margin-bottom: 5%;
+        text-align: center;
+    }
+    #first{
+        font-size: 2em;
+        font-family: redHatDisplayRegular;
+    }
+    #kol{
+        margin: 7.18em 0;
+    }
+    section{
+        margin: 13em 0;
+        width: 100%;
+    }
+    #background{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right bottom, rgba(64, 255, 186, 0.2) 9.49%, rgba(68, 255, 154, 0.064) 86.84%);
+    }
+    #call:hover{
+        color: rgb(6, 63, 1);
+    }
+    @media screen and (max-width: 768px){
+        #main, #background{
+            height: 50%;
+        }
+        #main_container h2{
+            font-size: 2em;
+        }
+        #title{
+            font-size: 3.5em;
+        }
+        #first{
+            font-size: 2em;
+        }
+    }
+    @media screen and (min-width: 768px){
+        #main, #background{
+            height: 100%;
+        }
+    }
+    @media screen and (max-width: 1025px) and (min-width: 1000px){
+        #main_container h2{
+            font-size: 2.5em;
+        }
+        #title{
+            font-size: 4em;
+        }
+        #first{
+            font-size: 2em;
+        }
+    }
+    @media screen and (min-width: 279px) and (max-width: 281px){
+        #main_container h2{
+            font-size: 2em;
+        }
+        #title{
+            font-size: 4em;
+        }
+        #first{
+            font-size: 2em;
+        }
+    }
+</style>
+<div id="background"></div>
+<div id="main" class="Pcenter_cont">
+    <h1 id="title">Refund Advocates LLC</h1>
+    <div class="Pcenter_cont" id="main_container">
+        <p id="first">If our organization contacted you</p>
+        <h2>We believe that we have found money<br>that belongs to you or your relative</h2>
+    </div>
+</div>
+<div id="kol" class="Pcenter_cont" style="text-align: center;">
+    <p class="redHatTextRegular">We've all heard that if it sounds too good to be true... it probably is.<br><b>Fortunately, this isn't one of them</b></p>
+</div>
+<div class="line" style="margin-bottom:7.2em;"></div>
+<section class="Pcenter_cont" style="flex-direction: column; margin: 0;">
+    <img src="./art/money.svg" width="45%">
+    <h1 class="redHatDisplayBlack strong textCent tem" style="margin: 2.125em 0 1.87em;">Did you know that over $4 BILLION DOLLARS in unclaimed funds<br>is just sitting in government bank accounts?</h1>
+    <p class="textCent redHatTextRegular norm36" style="white-space: pre;">And did you know that if the people who those funds belong to <b>don't know about it</b> and
+        don't claim them, the <b>government gets to keep them?</b> Approximately 1 in 10 people have
+        unclaimed property! There are literally billions of dollars in unclaimed property, held by
+        state governments and treasuries within the United States.
+        
+        The purpose of unclaimed property laws is to protect the public by ensuring money and
+        property owed to them is returned, rather than remaining permanently with financial
+        institutions, business associations, governments, and other entities.
+        
+        Pursuant to jurisdictional regulations our organization mails letters and reaches out by
+        phone to property owners informing them of property in their name held by the
+        government agency. <b>We are successful in reuniting owners with their unclaimed
+        property.</b></p>
+</section>
+<section class="Pcenter_cont" style="flex-direction: column;margin-bottom: 0;">
+    <img src="./art/wallet.svg" width="20%">
+    <h1 class="redHatDisplayBlack strong textCent temt" style="margin: 2.125em 0 .9em;;margin-bottom: 2em;">Never Any Out of Pocket Costs to You</h1>
+    <p class="redHatTextMedium textCent" style="margin-bottom: 4.3em;">We will never ask for a dime along the way. We only get paid if and when we are<br>successful at recovering your funds.</p>
+    <p class="textCent redHatTextRegular norm36" style="white-space: pre;"><b>You received a letter or call from our organization because</b> we believe that some
+        of these funds belong to <b>you or one of your family members.
+        <b class="strong">Give us a call and let us show you what our research has uncovered.</b></b>
+        
+        Our representatives audit government agencies throughout the country, digging through
+        their public records in search of lost, missing, and unclaimed funds belonging to private
+        citizens. It's our mission to reunite these funds with their proper owners!
+        
+        If you've received a letter, postcard, or telephone call from our organization, it's
+        because <b>we've located fund's we believe belong to you.</b></p>
+</section>
+<div class="Pcenter_cont textCent" style="width: 100%;height: max-content;padding: 1.25em 0; background-color: #9DFF95; margin: 2em 0 10em;">
+    <a id="call" href="https://wa.me/--" target="_blank">
+        <p class="textCent redHatDisplayBold" style="white-space: pre-line;">Call us now!
+            We are avalable now at ...
+            <span class="redHatDisplayRegular">- -</span></p>
+    </a>
+</div>
+<section class="Pcenter_cont" style="flex-direction: column; margin-top: 0;">
+    <img src="./art/dont_wait.svg" class="radius" width="30%">
+    <p class="textCent redHatTextRegular norm36" style="white-space: pre;margin-top: 3em;"><b class="strong">Often these funds are held for only a brief period of time</b>, after which the agency
+        responsible for them may be permitted to seize them through a process called
+        "escheatment", which originated in feudal 16th century England. <b>We think private
+        citizens losing their funds to faceless government agencies is completely unfair and
+        we are determined to prevent this from happening to anyone, especially you.</b></p>
+</section>

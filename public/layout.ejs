@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Advocates LLC</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Rose&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            line-height: 125%;
+        }
+        body, html{
+            width: 100vw;
+            height: 100vh;
+        }
+        body{
+            overflow-y: auto;
+        }
+        :root{
+            --maincol: #00e016;
+        }
+        @font-face {
+            font-family: redHatDisplayBlack;
+            src: url("font/RedHatDisplay-Black.ttf");
+        }
+        @font-face {
+            font-family: redHatDisplayBold;
+            src: url("font/RedHatDisplay-Bold.ttf");
+        }
+        @font-face {
+            font-family: redHatDisplayMedium;
+            src: url("font/RedHatDisplay-Medium.ttf");
+        }
+        @font-face {
+            font-family: redHatDisplayRegular;
+            src: url("font/RedHatDisplay-Regular.ttf");
+        }
+        @font-face {
+            font-family: redHatTextRegular;
+            src: url("font/RedHatText-Regular.ttf");
+        }
+        @font-face {
+            font-family: redHatTextMedium;
+            src: url("font/RedHatText-Medium.ttf");
+        }
+        @font-face {
+            font-family: redHatTextBold;
+            src: url("font/RedHatText-Bold.ttf");
+        }
+
+
+        *::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* ----------------------------- */
+        .ofr{
+            font-size: 1.5em;
+            text-align: left;
+        }
+        .radius{
+            border-radius: 5px;
+        }
+        .temt{
+            font-size: 2.5em;
+        }
+        .header{
+            font-family: redHatDisplayBlack;
+            font-size: 2.5em;
+        }
+
+        .alignLeftAbs{
+            position: absolute;
+            left: 5%;
+        }
+        
+        .alignLeftRel{
+            position: relative;
+            margin-left: 5%;
+        }
+
+        .norm40{
+            font-size: larger;
+            text-align: justify;
+        }
+        .tem{
+            font-size: 2em;
+        }
+        .subheader{
+            font-family: redHatDisplayBold;
+            font-size: 2em;
+        }
+        .norm36{
+            font-size: 1em;
+        }
+        .med48{
+            font-family: redHatTextMedium;
+            font-size: 1.5em;
+            text-align: center;
+        }
+        .marginTopP{
+            margin-top: 1em;
+        }
+        .boxShadow{
+            box-shadow: 0 4px 37px rgba(0, 0, 0, 0.25);
+        }
+        /* --------------------------------- */
+        p b{
+            font-family: redHatTextBold;
+        }
+        .textCent{
+            text-align: center;
+        }
+        .strong{
+            color: var(--maincol);
+        }
+        .redHatDisplayBold {
+            font-family: redHatDisplayBold;
+        }
+        .redHatDisplayBlack {
+            font-family: redHatDisplayBlack;
+        }
+        .redHatDisplayRegular {
+            font-family: redHatDisplayRegular;
+        }
+        .redHatDisplayMedium {
+            font-family: redHatDisplayMedium;
+        }
+        .redHatTextRegular {
+            font-family: redHatTextRegular;
+        }
+        .redHatTextMedium {
+            font-family: redHatTextMedium;
+        }
+        .redHatTextBold {
+            font-family: redHatTextBold;
+        }
+        
+        .line{
+            width: 99%;
+            height: 2px;
+            background-color: #DFDFDF;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+        .marginCent{
+            margin: 0 auto;
+        }
+        .Pcenter_cont{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #nav{
+            top: 0;
+            position: fixed;
+            z-index: 1000;
+            font-family: 'Red Rose', cursive;
+            font-weight: 1em;
+            width: 100vw;
+            height: 8%;
+            background-color: #6DB0FF;
+            display: flex;
+            align-items: center;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+        }
+        a{
+            text-decoration: none;
+            color: #000000;
+        }
+        #nav #links a{
+            transition: color 200ms;
+        }
+        #nav #links a:hover{
+            color:  #0044AA;
+        }
+        #logo{
+            font-family: redHatDisplayRegular;
+            left: 2%;
+            position: absolute;
+        }
+        #links{
+            position: absolute;
+            right: 2%;
+        }
+        #links p{
+            display: inline;
+            margin: 0 .625em;
+        }
+        footer h2, footer h1{
+            color: white;
+        }
+        footer div{
+            width: 100%;
+        }
+        #img img{
+            margin: 0 2em;
+            height: 80%;
+        }
+        #img a{
+            height: 2em;
+        }
+        footer{
+            position: relative;
+            margin-top: 5em;
+            height: 20em;
+            width: 100%;
+            bottom: 0;
+            background-color: #00e016;
+        }
+        #boxo{
+            position: absolute;
+            width: 100%;
+            height: max-content;
+            white-space: pre-line;
+            text-align: center;
+            color: white;
+        }
+        #adresses{
+            width: 100%;
+            height: 70%;
+        }
+        #img{
+            height: max-content;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 1.5em;
+        }
+        #boxo_cont{
+            position: relative;
+            flex-direction: column;
+            background-color: #114200;
+            height: 70%; 
+            padding: 2em 0;
+            justify-content: center;
+            align-items: center;
+        }
+        #top{
+            flex-direction: column;
+            background-color:#36FF4A;
+            height: 60%;
+        }
+        #kokokokok{
+            width: 11em;
+            height:3.5em;
+            box-sizing: border-box;
+            margin-top: 1.5em;
+            border-radius: 4.5px;
+            background-color: #9DFF95;
+        }
+        @media screen and (max-width: 376px){
+            #nav{
+                height: 5%;
+            }
+            body{
+                font-size: 48% !important;
+            }
+            footer{
+                height: 17em;
+            }
+        }
+        @media screen and (min-width: 413px) and (max-width: 760px){
+            #nav{
+                height: 6%;
+            }
+            body{
+                font-size: 50% !important;
+            }
+            footer{
+                height: 19em;
+            }
+        }
+        @media screen and ( min-width: 279px) and (max-width: 281px){
+            #nav{
+                height: 5%;
+            }
+            body{
+                font-size: 30% !important;
+            }
+        }
+        @media screen and (max-width: 1025px) and (min-width: 1000px){
+            body{
+                font-size: 120% !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        <div id="logo">
+            <a href="/"><p>Refund Advocates<br>LLC</p></a>
+        </div>
+        <div id="links">
+            <a href="/" id="home"><p>Home</p></a>
+            <a href="/ourcompany" id="company"><p>Our Company</p></a>
+            <a href="/howitworks" id="works"><p>How It Works</p></a>
+            <a href="/questions" id="questions"><p>Questions?</p></a>
+            <a href="/contact" id="contact"><p>Contact Us</p></a>
+        </div>
+    </nav>
+    <%- body %>
+    <footer>
+        <div class="Pcenter_cont" id="top">
+            <h1 class="redHatDisplayBlack tem">Want Your Money Back?</h1>
+            <a href="/contact" class="Pcenter_cont" id="kokokokok">
+                <h2 class="redHatDisplayBlack" style="font-size: larger;color: black;">Contact Now</h2></a>
+        </div>
+<!--  -->
+        <div id="boxo_cont" style="display: flex;">
+            <div id="adresses">
+                <p class="redHatTextRegular norm40 Pcenter_cont" id="boxo">Your Address,address, adress, Refund Advocates LLC</p>
+                <p class="redHatTextRegular norm40 Pcenter_cont" id="boxo" style="margin-top: 1.5em;">0237-1287-2343</p>
+            </div>
+            <div id="img">
+                <a><img src="art/twitter.svg"></a>
+                <a><img src="art/phonr.svg"></a>
+                <a><img src="art/instagram.svg"></a>
+                <a><img src="art/mail.svg"></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

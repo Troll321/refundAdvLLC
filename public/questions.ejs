@@ -1,0 +1,135 @@
+<style>
+    body{
+        padding-top: 8vh;
+    }
+    html{
+        scroll-padding-top: 8vh;
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 3em 0;
+        width: 100%;
+        position: relative;
+        box-sizing: content-box;
+        transition: all 100ms;
+    }
+    #questions::before{
+        content: "Questions?---";
+        position: fixed;
+        top: 0;
+        color: transparent;
+        background-color: #0044AA;
+        height: .2em;
+        width: max-content;
+    }
+    section *{
+        transition: all 100ms;
+    }
+    .p{
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        top: -1em;
+        transition: all 100ms;
+    }
+    .line{
+        width: 90%;
+        height: 2px;
+        margin: 1em 0 0;
+    }
+    .subheader2{
+        width: 90%;
+        visibility: visible;
+        font-family: redHatDisplayRegular;
+        transition: all 100ms;
+        font-weight: 600;
+    }
+    .subheader2:hover{
+        font-weight: 900;
+        font-family: redHatDisplayMedium;
+    }
+    @media screen and ( min-width: 279px) and (max-width: 281px){
+        body{
+            height: 653px;
+            position: relative;
+        }
+        footer{
+            position: absolute;
+            bottom: 0;
+        }
+    }
+    @media screen and (max-height: 1000px){
+        body{
+            height: 100%;
+            position: relative;
+        }
+        footer{
+            position: absolute;
+            bottom: 0;
+        }
+    }
+</style>
+<h1 class="header alignLeftRel strong marginTopP">Questions?</h1>
+<section style="flex-direction: column;">
+    <h1 class="subheader2">How Did You Find This Money?</h1>
+    <p class="p alignLeftRel redHatTextRegular med48 marginTopP" style="text-align: left; width: 90%; margin-left: 0;">We audit different government agencies on a regular basis for
+        unclaimed funds due to citizens like yourself.</p>
+        <div class="line alignLeftRel"></div>
+    </section>
+<section style="flex-direction: column;">
+    <h1 class="subheader2">How Did You Find Me?</h1>
+    <p class="p alignLeftRel redHatTextRegular med48 marginTopP" style="text-align: left; width: 90%; margin-left: 0;">We usually locate our clients by doing internet searches</p>
+    <div class="line alignLeftRel"></div>
+</section>
+<section style="flex-direction: column;">
+    <h1 class="subheader2">How Much Is My Claim, Where Is It Being Held?</h1>
+    <p class="p alignLeftRel redHatTextRegular med48 marginTopP" style="text-align: left; width: 90%; margin-left: 0;">Once you have signed our contingency fee agreement, we'll be
+        happy to disclose where the funds have been located!</p>
+        <div class="line alignLeftRel"></div>
+    </section>
+<section style="flex-direction: column;">
+    <h1 class="subheader2">Can't I Find the Money On My Own?</h1>
+    <p class="p alignLeftRel redHatTextRegular med48 marginTopP" style="text-align: left; width: 90%; margin-left: 0;">The government agencies we audit typically DO NOT post
+        these uclaimed funds accounts online. You are welcome to search
+        state unclaimed funds websites, but if you find funds there,
+        these are not the funds we're informing you about.</p>
+        <div class="line alignLeftRel"></div>
+    </section>
+<section style="flex-direction: column;">
+    <h1 class="subheader2">Why Should I use Your Company?</h1>
+    <p class="p alignLeftRel redHatTextRegular med48 marginTopP" style="text-align: left; width: 90%; margin-left: 0;">
+        <b>
+        We keep your information 100% private and confidential.<br>
+We never ask for any personal financial information.<br>
+We do not sell or give your information to anyone outside of our organization.<br><br><br></b>
+        
+        Most of the assets we locate aren't available by searching the
+        internet, and it's unlikely that without the aid of a company like ours,
+        that you'll be notified of their existence by the agency holding them.</p>
+        <div class="line alignLeftRel"></div>
+    </section>
+<div style="visibility: hidden;">-</div>
+<script>
+    const element = document.getElementsByClassName("subheader2");
+    for (let l = 0; l < element.length; l++) {
+        const p = document.getElementsByClassName("p")[l].style;
+        element[l].addEventListener("click", ()=>{
+            if (element[l].classList[1]) {
+                element[l].classList.remove("strong", "redHatDisplayMedium");
+                p.opacity = "0"
+                p.position = "absolute";
+                p.visibility = "hidden";
+                p.top = "-1em"
+            }
+            else{
+                element[l].classList.add("strong", "redHatDisplayMedium");
+                p.top = "0";
+                p.opacity = "1"
+                p.position = "relative";
+                p.visibility = "visible";
+            }
+        });
+    }
+</script>
