@@ -25,7 +25,6 @@ app.get("/contact",(req,res)=>{
     res.render("contact");
 });
 app.post("/contact", (req,res)=>{
-    res.redirect("https://wa.me/6287839917728");
-    res.send(req.body);
+    res.render("contact");
 })
 app.listen(process.env.PORT || 3000);
