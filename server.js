@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const expressLayout = require("express-ejs-layouts");
@@ -32,14 +33,19 @@ app.post("/contact", (req,res)=>{
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'atila.ghulwani@gmail.com',
-            pass: "gHulw^niL07"
+            // Set this to with creating a .env file and give it
+            // gmail=YOUREMAIL
+            // password=YOURPASSWORD
+            // YOUR GMAIL
+            user: process.env.gmail,
+            // YOUR PASSWORD
+            pass: process.env.password
         }
     });
     
     const mailOptions = {
-        from: 'atila.ghulwani@gmail.com',
-        to: 'atila.ghulwani@gmail.com',
+        from: process.env.gmail,
+        to: process.env.gmail,
         subject: 'Message by '+req.body.name,
         html: `<h1>This is a message by: ${req.body.email}</h1><br><br><h2>With name: ${req.body.name}</h2><br><br><h2>MESSAGE:</h2><p>${req.body.message}</p>`
     };
