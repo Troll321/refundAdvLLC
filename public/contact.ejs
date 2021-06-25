@@ -68,6 +68,9 @@
         }
     }
 </style>
+<% if(alert){ %>
+    <script>alert("<%= alert %>")</script>
+<% } %> 
 <h1 class="header alignLeftRel strong marginTopP">Contact Us</h1>
 <section>
     <div class="radius marginCent" id="ffgui">
@@ -88,15 +91,15 @@
     <form id="contact_form" class="marginCent" style="margin-top: 4em;width: 70%;" method="POST" action="/contact">
         <div class="input"  style="margin-top: 2.5em;">
             <label form="contact_form" class="redHatDisplayRegular ofr" for="message"><p>Message</p></label>
-            <input form="contact_form" class="marginTopP" type="message" name="message" id="message">
+            <input required form="contact_form" class="marginTopP" type="message" name="message" id="message">
         </div>
         <div class="input"  style="margin-top: 2.5em;">
             <label form="contact_form" class="redHatDisplayRegular ofr" for="email"><p>Email</p></label>
-            <input form="contact_form" class="marginTopP" type="email" name="email" id="email">
+            <input required form="contact_form" class="marginTopP" type="email" name="email" id="email">
         </div>
         <div class="input" style="margin-top: 2.5em;">
             <label form="contact_form" class="redHatDisplayRegular ofr" for="name" ><p>Name</p></label>
-            <input form="contact_form" class="marginTopP" type="text" name="name" id="name">
+            <input required form="contact_form" class="marginTopP" type="text" name="name" id="name">
         </div>
         <div id="submit_cont" style="margin-top: 5em;">
             <label form="contact_form"  for="submitI">
